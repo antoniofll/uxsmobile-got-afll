@@ -9,12 +9,14 @@ import java.io.Serializable;
 public class Character implements Serializable{
     private String name, actor, house;
     private String imageLink;
+    boolean isMale;
 
-    public Character(String name, String actor, String house, String imageLink) {
+    public Character(String name, String actor, String house, String imageLink,boolean isMale) {
         this.name = name;
         this.actor = actor;
         this.house = house;
         this.imageLink = imageLink;
+        this.isMale = isMale;
     }
 
     public String getName() {
@@ -49,6 +51,11 @@ public class Character implements Serializable{
         this.house = house;
     }
 
-    //Serializable methods
+    public boolean isMale() {
+        return isMale;
+    }
 
+    public void setMale(boolean male) {
+        isMale = male;
+    }
 }

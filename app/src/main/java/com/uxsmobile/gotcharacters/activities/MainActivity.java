@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                             for(int i =0; i<list.length();i++){
                                 JSONObject character = (JSONObject) list.get(i);
                                 if(!character.isNull("imageLink")) {
-                                    characters.add(new Character(character.getString("name"), character.optString("actor"), character.optString("house"), character.optString("imageLink")));
+                                    characters.add(new Character(character.getString("name"), character.optString("actor"), character.optString("house"), character.optString("imageLink"), character.optBoolean("male")));
                                 }
                             }
                         }catch (Exception e){

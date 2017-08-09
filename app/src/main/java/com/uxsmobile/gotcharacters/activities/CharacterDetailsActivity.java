@@ -35,12 +35,19 @@ public class CharacterDetailsActivity extends AppCompatActivity {
         TextView name = (TextView) findViewById(R.id.name);
         TextView house = (TextView) findViewById(R.id.house);
         TextView actor = (TextView) findViewById(R.id.actor);
+        TextView genre = (TextView) findViewById(R.id.genre);
         ImageView photo = (ImageView) findViewById(R.id.photo);
 
         //Set values
         name.setText(character.getName());
         house.setText("House: " + character.getHouse());
         actor.setText("Actor: " + character.getActor());
+        if(character.isMale()){
+            genre.setText("Genre: Male");
+        }else{
+            genre.setText("Genre: Female");
+        }
+
         Picasso.with(this).load(Constants.API_URL+ character.getImageLink()).into(photo);
     }
 
