@@ -63,7 +63,9 @@ public class CharactersAdapter extends RecyclerView.Adapter {
     public void configureCharacterViewholder(final CharacterViewholder vh, int position){
         final Character character = items.get(position);
 
+        //Fill viewholder with character values
         vh.nameTextView.setText(character.getName());
+        //Add Vignette transformation (dark shadow borders)
         Picasso.with(context).load(Constants.API_URL+character.getImageLink()).placeholder(R.color.greyError).fit().centerCrop().transform(new VignetteFilterTransformation(context,
                 new PointF(0.5f, 0.5f), new float[]{0.0f, 0.0f, 0.0f}, 0f, 0.75f)).into(vh.photoImageView);
 

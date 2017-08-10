@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
                         //Add items
                         mAdapter= new CharactersAdapter(getApplicationContext(),characters);
                         mRecyclerView.setAdapter(mAdapter);
-                        //System.out.println("Response is: "+ response.substring(0,500));
                     }
                 }, new Response.ErrorListener() {
             @Override

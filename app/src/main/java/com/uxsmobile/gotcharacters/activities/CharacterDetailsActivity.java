@@ -47,7 +47,6 @@ public class CharacterDetailsActivity extends AppCompatActivity {
         }else{
             genre.setText("Genre: Female");
         }
-
         Picasso.with(this).load(Constants.API_URL+ character.getImageLink()).into(photo);
     }
 
